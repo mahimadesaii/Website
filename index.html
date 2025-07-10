@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Steel Products</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background: url('background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Translucent overlay — more transparent now */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .tools-timeline {
+      position: relative;
+      margin: 50px auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .tools-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 60px;
+      /* Positioning the vertical line */
+      width: 4px;
+      height: 100%;
+      background-color: #1565c0;
+      z-index: 0;
+    }
+
+    .tool-step {
+      position: relative;
+      padding-left: 120px;
+      margin-bottom: 50px;
+    }
+
+    .tool-icon {
+      position: absolute;
+      left: 42px;
+      /* To perfectly center 36px circle on the 4px line at 60px */
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background-color: #1565c0;
+      color: white;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px #1565c0;
+    }
+
+    .tool-content {
+      background-color: #f9fbfc;
+      padding: 16px 20px;
+      border-radius: 6px;
+      border: 1px solid #d0e3f5;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .tool-content:hover {
+      transform: translateY(-3px);
+    }
+
+    .tool-content h4 {
+      color: #0a4372;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .tool-content p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .why-boxes {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .why-box {
+      flex: 1;
+      min-width: 230px;
+      background-color: #b0b0b0;
+      /* darker gray by default */
+      color: #000;
+      /* black text */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      padding: 20px;
+      border-left: 5px solid #1565c0;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .why-box:hover {
+      background-color: #fffefe;
+      /* slightly lighter gray on hover */
+      transform: translateY(-4px);
+    }
+
+    .why-box h4,
+    .why-box p {
+      color: #000 !important;
+    }
+
+    .section-container p,
+    .section-container li,
+    main p,
+    main li {
+      font-size: 18px;
+      /* or 17px if you want it larger */
+      line-height: 1;
+      /* better spacing */
+    }
+
+    .section-container {
+      margin-top: 10px;
+      padding-left: 40px;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .collapsible-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.3s ease;
+      color: #ffffff;
+      margin-bottom: 10px;
+      /* Add spacing after heading */
+
+    }
+
+    .collapsible-btn:hover {
+      color: #ffffff;
+    }
+
+    .content-box {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      background-color: #f4f6f8;
+      margin-left: 20px;
+      margin-bottom: 12px;
+      border-left: 4px solid #1565c0;
+      padding: 0 16px;
+      border-radius: 4px;
+    }
+
+    .content-box.open {
+      padding: 16px;
+      max-height: 1000px;
+      /* large enough to accommodate content */
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="navbar">
@@ -23,12 +204,170 @@
       </ul>
     </div>
   </header>
+  <!-- Add this in <head> for Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <main>
-  <div class="main-content">
-    <h2>Welcome to Our Steel Products Website</h2>
-    <p>This section will include images and highlights of Flat and Long Products.</p>
-  </div>
+    <div style="font-family: 'Segoe UI', sans-serif; text-align: left;">
+
+      <!-- Section Title -->
+      <h2 style="
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+">
+        Data-Driven Sales Optimization in Steel Products
+      </h2>
+
+      <!-- Fancy Styled Block (No Icon) -->
+      <div style="
+  background: linear-gradient(135deg, #e3f2fd 0%, #f7fbff 100%);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin: 30px auto;
+  max-width: 1000px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #333;
+">
+
+        <p style="margin-bottom: 16px; text-align: center;">
+          Welcome to the official portal of the <strong>Sales Optimization Project</strong> — a digital initiative
+          focused on transforming how sales teams access, interpret and act upon sales data for strategic growth.
+          This platform aims to optimize internal sales processes by reducing manual effort, enhancing KPI visibility
+          and enabling faster, smarter and insight-driven decisions across teams.
+        </p>
+
+
+
+      </div>
+
+
+      <h3 style="color: #ffffff; margin-top: 30px; margin-bottom: 10px; font-size: 25px; text-align: center;">Tools
+        Developed</h3>
+      <div class="tools-timeline">
+        <div class="tool-step">
+          <div class="tool-icon">📊</div>
+          <div class="tool-content">
+            <h4>Interactive Power BI Dashboard</h4>
+            <p>Visualize sales performance dynamically across product types, geographies, and customer segments.</p>
+          </div>
+        </div>
+
+        <div class="tool-step">
+          <div class="tool-icon">🤖</div>
+          <div class="tool-content">
+            <h4>Predictive Analytics Model</h4>
+            <p>Use machine learning to forecast trends and predict when targets might be met.</p>
+          </div>
+        </div>
+
+        <div class="tool-step">
+          <div class="tool-icon">💬</div>
+          <div class="tool-content">
+            <h4>Sales Query Chatbot</h4>
+            <p>Quickly retrieve sales data through 27+ predefined queries — no more searching through spreadsheets.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color: #ffffff; margin-top: 30px; margin-bottom: 20px; font-size: 25px; text-align: center;">Why It
+        Matters</h3>
+      <div class="why-boxes">
+        <div class="why-box">
+          <h4>Efficiency</h4>
+          <p>Automating repetitive sales tasks helps teams focus on strategic goals. By eliminating manual data
+            retrieval and report generation, employees can spend more time analyzing insights and less time performing
+            routine operations.</p>
+        </div>
+        <div class="why-box">
+          <h4>Accuracy</h4>
+          <p>Leveraging centralized data tools ensures consistency across reports and dashboards. This reduces human
+            error, provides a single source of truth, and builds confidence in sales figures presented to leadership and
+            clients.</p>
+        </div>
+        <div class="why-box">
+          <h4>Scalability</h4>
+          <p>As business grows, so does data complexity. A user-friendly and scalable solution enables seamless access
+            to large datasets without performance bottlenecks — ensuring long-term viability and ease of expansion.</p>
+        </div>
+        <div class="why-box">
+          <h4>Decision-Making</h4>
+          <p>Instead of relying on assumptions, data tools enable sales teams to identify trends, forecast outcomes, and
+            proactively respond to market shifts — turning information into action and driving results.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #ffffff; margin-top: 30px; margin-bottom: 20px; font-size: 25px; text-align: center;">Explore
+        the Project</h3>
+
+      <div style="margin-top: 10px; text-align: center;">
+        <div style="display: inline-block; text-align: center; max-width: 1300px; margin-bottom: 10px; width: 100%;">
+
+          <div class="collapsible-section">
+
+            <button class="collapsible-btn" onclick="toggleContent('dashboard')">Power BI Dashboard</button>
+            <div class="content-box" id="dashboard">
+              An interactable Power BI dashboard was developed for TMT, a steel long product, with the objective of
+              enabling easier exploration and analysis of sales data. The dashboard was designed to be user-friendly,
+              with
+              filters allowing users to dynamically adjust the view based on their specific needs. It displays sales
+              value
+              and features various graphs and visuals that help in sales analysis and identification of insights.
+              <br><br>
+              The initial version of the dashboard was created using data from a single state and a shorter time range,
+              serving as a prototype to test the data structure, filtering functionality and visualization layout. This
+              phase allowed for iterative refinements and validation of the dashboard’s logic. Once the functionality
+              and
+              presentation were confirmed to be effective, the dashboard was scaled up to include all states and a
+              complete time period, offering a comprehensive and organization-wide view of TMT sales performance.
+            </div>
+          </div>
+
+          <div class="collapsible-section">
+            <button class="collapsible-btn" onclick="toggleContent('prediction')">Machine Learning Prediction</button>
+            <div class="content-box" id="prediction">
+              This was developed in Python using Visual Studio Code and focused on building a machine learning-based
+              forecasting model using the TMT sales data. The model was designed to address two key use cases: firstly,
+              to
+              predict sales for the next 12 months and secondly, to perform target-based prediction, where the user can
+              either input a desired sales target to estimate when it will be achieved, or allow the model to suggest a
+              target based on historical trends.
+              <br><br>
+              To implement this, the Prophet model developed by Meta Open Source formerly Facebook, was used for time
+              series forecasting. It is well-suited for handling data with strong seasonality and irregularities such as
+              missing values or outliers. The model’s outputs were visualized using Python’s visualization libraries,
+              making the predictions easy to interpret and valuable for planning and decision-making.
+            </div>
+          </div>
+
+          <div class="collapsible-section">
+            <button class="collapsible-btn" onclick="toggleContent('chatbot')">Sales Data Chatbot</button>
+            <div class="content-box" id="chatbot">
+              The chatbot was developed using HTML to solve a key challenge faced by internal users i.e. retrieving
+              specific sales information quickly from a large Excel dataset. Manually searching through thousands of
+              rows
+              to locate sales figures for a particular customer, region, or time period was both time-consuming and
+              prone
+              to errors. The chatbot provides a streamlined solution by offering fast, accurate access to frequently
+              required sales insights. A total of 27 predefined queries were implemented, based on real-world use cases
+              identified during discussions with the Sales and IT Digital Solutions team. <br><br>
+              These include queries such as top or bottom customers by sales, sales in a specific state or city,
+              customer-wise quantity sold in a particular month and comparative analysis between periods or regions. To
+              ensure ease of use, the chatbot interface was designed with clickable option for each query, rather than
+              requiring users to type text inputs. This reduces the risk of input errors and simplifies the interaction
+              for users. On selecting a query, the chatbot processes the request and returns an accurate response
+              derived
+              directly from the dataset. This approach significantly reduces the need for manual filtering and improves
+              the speed and efficiency of internal reporting tasks. </div>
+          </div>
+        </div>
+      </div>
   </main>
 
   <footer class="footer">
@@ -61,5 +400,24 @@
       <p>&copy; 2025 JSW Steel. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      if (content.classList.contains("open")) {
+        content.style.maxHeight = null;
+        content.classList.remove("open");
+        content.style.padding = "0 16px";
+      } else {
+        content.classList.add("open");
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.padding = "16px";
+      }
+    }
+
+  </script>
+
+
 </body>
+
 </html>
