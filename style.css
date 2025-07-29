@@ -1,0 +1,621 @@
+/* Base Styles - Used across all HTML files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header/Navbar Styles - Used across all HTML files */
+header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.nav-links a:hover,
+.dropdown-content a:hover {
+  background-color: #007bff;
+  color: white !important;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Dropdown specific styles - Primarily used in index.html for "Products" dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  min-width: 200px;
+  top: 35px;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a,
+.dropdown-content p {
+  color: black;
+  padding: 5px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-links li:last-child .dropdown-content {
+  right: 0;
+  left: auto;
+}
+
+/* Main Content Base - Used across all HTML files */
+main {
+  min-height: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer Styles - Used across all HTML files */
+.footer {
+  background-color: #f1f1f1;
+  color: #1e1e1e;
+  padding: 40px 20px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin-bottom: 6px;
+}
+
+.social-icons span {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Styles specific to About Us (about.html) */
+.container {
+  margin: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  flex: 1 1 60%;
+  font-size: 18px;
+  font-family: 'Calibri', sans-serif;
+  color: #333;
+  text-align: justify;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+.text-section h2 {
+  color: rgb(45, 45, 236);
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.image-section {
+  flex: 1 1 35%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sajjan-image {
+  flex: 1 1 15%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.sajjan-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sajjan-text {
+  flex: 1 1 80%;
+  font-size: 18px;
+  font-family: 'Calibri', sans-serif;
+  color: #333;
+  text-align: justify;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+.sajjan-text h2 {
+  color: rgb(45, 45, 236);
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+
+
+/* Styles specific to Contact Us (contact.html) */
+.contact-main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #333;
+  line-height: 2.6;
+  text-align: center;
+}
+
+.contact-details h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-details img { /* Added style for image in contact-details */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.contact-details .icon-red { /* Added class for red icons */
+  color: red;
+}
+
+.map-preview {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-preview a img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.map-preview a img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-preview a img {
+    max-width: 100%;
+  }
+}
+
+/* Specific styles for index.html elements like timeline and why boxes */
+.index-body { /* New class for index.html body background */
+  background: url('background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.index-body::before { /* New class for index.html body overlay */
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.main-title { /* New class for main heading */
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.fancy-block { /* New class for the fancy styled block */
+  background: linear-gradient(135deg, #e3f2fd 0%, #f7fbff 100%);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin: 30px auto;
+  max-width: 1000px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #333;
+}
+
+.fancy-block p {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-heading { /* New class for section headings in index.html */
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.tools-timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.tools-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 4px;
+  height: 100%;
+  background-color: #1565c0;
+  z-index: 0;
+}
+
+.tool-step {
+  position: relative;
+  padding-left: 120px;
+  margin-bottom: 50px;
+}
+
+.tool-icon {
+  position: absolute;
+  left: 42px;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #1565c0;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border: 2px solid white;
+  box-shadow: 0 0 0 3px #1565c0;
+}
+
+.tool-content {
+  background-color: #f9fbfc;
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid #d0e3f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.tool-content:hover {
+  transform: translateY(-3px);
+}
+
+.tool-content h4 {
+  color: #0a4372;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.tool-content p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.why-boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.why-box {
+  flex: 1;
+  min-width: 230px;
+  background-color: #b0b0b0;
+  color: #000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+  border-left: 5px solid #1565c0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.why-box:hover {
+  background-color: #fffefe;
+  transform: translateY(-4px);
+}
+
+.why-box h4,
+.why-box p {
+  color: #000 !important;
+}
+
+.section-container p,
+.section-container li,
+main p,
+main li {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.section-container {
+  margin-top: 10px;
+  padding-left: 40px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.collapsible-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.collapsible-btn:hover {
+  color: #ffffff;
+}
+
+.content-box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: #f4f6f8;
+  margin-left: 20px;
+  margin-bottom: 12px;
+  border-left: 4px solid #1565c0;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.content-box.open {
+  padding: 16px;
+  max-height: 1000px;
+}
+
+/* Common main styling for product pages (flat.html, long.html) */
+.product-main {
+  background-color: white;
+  padding: 8px; /* Reduced padding from 8rem to 8px to align with original padding */
+  border-radius: 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 72rem; /* Reduced max-width from 6xl to 72rem to align with original max-width */
+  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .product-main {
+    flex-direction: row;
+  }
+}
+
+.product-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .product-image-section {
+    width: 50%;
+  }
+}
+
+.product-image-section img {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-width: 28rem; /* Equivalent to max-w-sm */
+  width: 100%;
+}
+
+.product-text-section {
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .product-text-section {
+    width: 50%;
+  }
+}
+
+.product-title {
+  font-size: 1.875rem; /* Equivalent to text-3xl */
+  font-weight: 700;
+  color: #1e40af; /* Equivalent to text-blue-800 */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #93c5fd; /* Equivalent to border-blue-300 */
+  padding-bottom: 0.5rem;
+}
+
+.product-description {
+  color: #4b5563; /* Equivalent to text-gray-700 */
+  line-height: 1.625; /* Equivalent to leading-relaxed */
+  text-align: justify;
+  font-size: 16px;
+}
+
+.product-description .highlight-blue-700 {
+  font-weight: 600;
+  color: #1d4ed8; /* Equivalent to text-blue-700 */
+}
+
+.product-description .highlight-medium {
+  font-weight: 500;
+}
+
+.product-description .highlight-green-700-italic {
+  font-style: italic;
+  color: #047857; /* Equivalent to text-green-700 */
+}
+
+.product-description .highlight-green-700-medium {
+  font-weight: 500;
+  color: #047857; /* Equivalent to text-green-700 */
+}
+
+.product-description .highlight-blue-900-bold {
+  font-weight: 700;
+  color: #1e3a8a; /* Equivalent to text-blue-900 */
+}
+
+.product-description .highlight-blue-800-semibold {
+  font-weight: 600;
+  color: #1e40af; /* Equivalent to text-blue-800 */
+}
+
+.product-description .highlight-semibold {
+  font-weight: 600;
+}
+
+/* Power BI Dashboard Link */
+.dashboard-link-container {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-link {
+  display: inline-block;
+  background-color: #1e40af; /* Equivalent to bg-blue-800 */
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.dashboard-link:hover {
+  background-color: #1d4ed8; /* Equivalent to hover:bg-blue-700 */
+}
